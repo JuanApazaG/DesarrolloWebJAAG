@@ -1,0 +1,76 @@
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E6E6FA; /* Lavender */
+}
+
+/* Estilos para el encabezado principal */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #4682B4; /* Steel Blue */
+    font-size: 36px;
+}
+
+h2{
+    text-align: center;
+    margin-top: 20px;
+    color: #4682B4; /* Steel Blue */
+    font-size: 36px;
+}
+/* Estilos para la imagen */
+img {
+    display: flex;
+    margin: 5px auto;
+    border-radius: 2px;
+}
+
+/* Estilos para los párrafos */
+p {
+    text-align: center;
+    color: #000000; /* Sea Green */
+    margin: 20px auto;
+    max-width: 80%;
+    line-height: 1.6;
+}
+
+/* Estilos para los subtítulos */
+
+
+/* Estilos para la tabla */
+table {
+    margin: 20px auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 3px solid black; 
+}
+
+
+table tr:nth-child(even) {
+    background-color: #4682B4; 
+}
+
+table tr:hover {
+    background-color: #87CEFA;
+}
+
+
+a {
+    color: #0c14ef; 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #f8f8f8;
+}
+
+table td.titulo1 {
+    color: black;
+}

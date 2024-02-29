@@ -38,7 +38,7 @@ header {
     font-weight: bold;
     padding-right:10px ;
 }
-a {
+.navbra a {
     text-decoration: none;
 }
 a:hover{
@@ -99,4 +99,16 @@ p {
 
 .row:hover {
     background-color: #87CEFA;
+}
+
+.friend-list{
+    display: flex;
+    width: 10px 10px;
+}
+.footer{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(31, 170, 239);
+    border-top: 1px solid black;
 }

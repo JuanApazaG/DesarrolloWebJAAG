@@ -39,6 +39,7 @@
     border-right: 1px solid black;
     width: 100px;
     padding: 30px 20px;
+    font-size: 13px;
 }
 
 .options{
@@ -52,6 +53,7 @@
     border-left: 1px solid black;
     width: 100px;
     padding: 30px 20px;
+    font-size: 13px;
 }
 .option{
     border: 1px solid black;
@@ -63,6 +65,7 @@
 }
 
 .footer{
+    height: 100px;
     width: 100%;
     padding: 10px;
     text-align: center;

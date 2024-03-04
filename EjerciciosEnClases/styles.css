@@ -14,7 +14,6 @@
 
 .header{
     width: 100%;
-    border-bottom: 1px solid black;
     display: flex;
     min-height: 100px;
     justify-content: space-between;
@@ -70,4 +69,19 @@
     background-color: #00B0F0;
     border-top: 1px solid black;
     color: #ffffff;
+}
+
+.carrera{
+    background-color: #00B050;
+    display: flex;
+    border-bottom: 1px solid  black;
+}
+.semestre{
+    text-align: right;
+    width: 20%;
+    padding-right: 1%;
+}
+.nombre{
+    width: 80%;
+    padding-left: 1%;
 }

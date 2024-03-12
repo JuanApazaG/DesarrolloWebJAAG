@@ -1,0 +1,89 @@
+.body {
+    background-color: #fafafa;
+    font-family: Rubik, sans-serif;
+    color: #252525;
+       
+}
+.header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    padding: 1px;
+    border-bottom: 1px solid black;    
+    line-height: 1.5;
+    max-width:120rem;
+    margin: -0.5rem auto;
+}
+.header__espacio{
+    width: 25%;
+}
+.header__texto{
+    padding: 10px;
+}
+.header__logo{
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+}
+.header__texto--suscribete{
+    background-color: #ffde00;
+    padding: 10px;
+}
+.titulo{
+    justify-content: center;
+    width: 100%;/*horizontal*/
+    height: auto;/*vertical*/
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.titulo__clasificados--texto{
+    justify-content: baseline;
+    text-align: left;
+}
+
+.titulo__titulo{
+    width: 55%;
+    margin-right: 10px;
+    font-size: 50px;
+    color: green;
+    font-weight: bold;
+}
+
+.nav-bg{
+ background-color: black;
+}
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .navegacion-principal{
+     flex-direction: row;
+     justify-content: space-around;
+    }
+ }
+
+ .navegacion-principal a{
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    background-color: rgba(255, 240, 245, 0.246);
+    color: white;
+}

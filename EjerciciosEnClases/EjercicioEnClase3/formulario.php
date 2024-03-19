@@ -6,6 +6,7 @@
 </head>
 <body>
     <h2>Calculadora</h2>
+    <p>frecha</p>
     <form action="calcular.php" method="post">
         <label for="num1">Número 1:</label>
         <input type="number" name="num1" required><br>

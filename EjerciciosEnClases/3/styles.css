@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 900px;
+    border: 1px solid black;
+    min-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    min-height: 100px;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #00B050; 
+    justify-content: center;
+}
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content{
+    display: flex;
+    min-height: 100px;
+
+}
+
+.pregunta{
+    border-right: 1px solid black;
+    width: 100px;
+    padding: 30px 20px;
+    font-size: 13px;
+}
+
+.options{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pregunta2{
+    border-left: 1px solid black;
+    width: 100px;
+    padding: 30px 20px;
+    font-size: 13px;
+}
+.option{
+    border: 1px solid black;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.footer{
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #00B0F0;
+    border-top: 1px solid black;
+    color: #ffffff;
+}
+
+.carrera{
+    background-color: #00B050;
+    display: flex;
+    border-bottom: 1px solid  black;
+}
+.semestre{
+    text-align: right;
+    width: 20%;
+    padding-right: 1%;
+}
+.nombre{
+    width: 80%;
+    padding-left: 1%;
+}

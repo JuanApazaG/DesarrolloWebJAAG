@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 2</title>
+    <link rel="stylesheet" href="pregunta2.css">
+</head>
+<body>
+    <h1></h1>
+    <div class="container">
+    <form class="form" action="tabla.php" method="POST" >
+        
+        <label for="operacion">operacion</label>
+            <select class="seleccionar"  name="operacion" >
+                <option value="sumar">sumar</option>
+                <option value="restar">restar</option>
+                <option value="multiplicar">multiplicar</option>
+                <option value="division">division</option>
+            </select>
+        
+        <label for="n">n</label>
+        <input type="number" name="num1" >
+        <br>
+        <input class="boton" type="submit" value="Generar">
+    </form>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Operación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        select, input[type="number"] {
+            background-color: #F79646;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #F79646;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Selecciona una operación y un número</h2>
+    <form action="tabla.php" method="POST">
+        <label for="operacion">Operación:</label>
+        <select name="operacion" id="operacion">
+            <option value="suma">Suma</option>
+            <option value="resta">Resta</option>
+            <option value="multiplicacion">Multiplicación</option>
+            <option value="division">División</option>
+        </select><br>
+        <label for="numero" style="color: #F79646;">Número (n):</label>
+        <input type="number" name="numero" id="numero" ><br>
+        <input type="submit" value="Generar Tabla">
+    </form>
+</body>
+</html>

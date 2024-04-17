@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = parseInt(prompt("introduce filas"));
+        var num2 = parseInt(prompt("introduce columnas"));
+        document.write("<table border='1'>");
+        for(var f=0; f< num1 ;f++){
+            document.write("<tr>");
+            for( var c=0; c<num2; c++){
+
+                document.write("<td>"+c+"</td>");
+            }
+            document.write("</tr>");
+
+        }
+        document.write("</table");
+
+    </script>
+</body>
+</html>

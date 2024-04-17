@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .tabla {
+        width: 100%;
+        margin-top: 20px;
+        border: blue;
+    }
+    .tabla tr{
+        border: blue;
+        background-color: blue;
+        margin: blue;
+
+    }
+    .table td{
+        border-radius: orange;
+    }
+
+   
+</style>
+
+</head>
+<body>
+    <script>
+        var num1 = parseInt(prompt("introduce filas"));
+        var num2 = parseInt(prompt("introduce columnas"));
+        var html = '<table class="tabla">';
+        for(var f=0; f< num1 ;f++){
+            html+= "<tr>";
+                for(var c = 0; c<num2;c++){
+                    html+=`<td>${c}</td>`;
+                }
+                html+= "</tr>";
+        }
+        html += "</table>";
+        document.write(html);
+
+    </script>
+</body>
+</html>

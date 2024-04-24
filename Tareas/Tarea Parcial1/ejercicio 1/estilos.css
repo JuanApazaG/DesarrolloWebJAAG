@@ -1,0 +1,78 @@
+.encabezado{
+    background-color: skyblue;
+    width: 900px;
+    left: 200px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+.imagen{
+    width: 300px;
+    left: 200px;
+    text-align: center;
+}
+.imagen img{
+    width: 100px;
+}
+.contenedor_encabezado{
+    padding-left: 20px;
+    text-align: left;
+}
+.titulo11{
+    color: red;
+    font-size: 25px;
+}
+.titulo211{
+    color: blue;
+}
+.rojo{
+    color: red;
+}
+.amarillo{
+    color: yellow;
+}
+.verde{
+    color: green;
+}
+.titulo2{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.titulo22{
+    color: red;
+    padding-right: 100px;
+}
+.carrera{
+    text-align: center;
+}
+.fecha{
+    text-align:center;
+}
+.titulo212{
+    padding-left: 150px;
+    align-items: center;
+    text-align: left;
+}
+.contenedor1{
+    padding-top: 50px;
+    width: 120px;
+    background-color: rgb(24, 17, 17);
+    left: 400px;
+    padding-left: 20px;
+}
+.contenedor2{
+    width: 780px;
+    left: 400px;
+    background-color: rgba(75, 90, 88, 0.79);
+}
+.contenedor{
+   width: 900px;
+   display: flex;
+}
+.ejercicio{
+    text-align: center;
+    width: 100px;
+    background-color: white;
+    margin: 2px;
+}

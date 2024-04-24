@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dias = ['lunes', 'martes','miercoles','jueves'];
+        var meses = ['enero','febrero','marzo','abril','mayo'];
+        var i;
+        for (i in meses) {
+            document.writeln(meses[i] + "<br>");
+        }
+        for (i in dias){
+            document.writeln(dias[i] + "<br>")
+        }
+        meses.sort();
+        console.log(meses);
+    </script>
+
+</body>
+</html>

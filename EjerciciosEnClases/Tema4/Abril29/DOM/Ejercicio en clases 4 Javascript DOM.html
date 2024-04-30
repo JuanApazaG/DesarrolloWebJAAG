@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio en clases 4 Javascript DOM</title>
+</head>
+<body>
+<label style="width: 500px;">Ejercicio en clases 4 Javascript DOM</label>
+<!--Realiza un programa en JS en el cual se tengan 2 inputs para introdcuir 
+    el valor de x y el valor de b, y un control select que tiene las opciones sumar, 
+restar, multiplicar y dividir cuando el usuario cambie de seleccion, el programa 
+debe hacer el calculo de la operacion seleccionada con los inputs introduciodos 
+y mostrarlos en un div con borde rojo y paddim de 50px demoninado resultado-->
+  <div>
+    <label for="y">Valor de y:</label>
+    <input type="number" id="y">
+  
+    <label for="b">Valor de b:</label>
+    <input type="number" id="b">
+  </div>
+
+  <div>
+    <label for="operaciones">Operación:</label>
+    <select id="operaciones">
+      <option value="sumar">Sumar</option>
+      <option value="restar">Restar</option>
+      <option value="multiplicar">Multiplicar</option>
+      <option value="dividir">Dividir</option>
+    </select>
+  </div>
+
+  <button onclick="calcular()">Calcular</button>
+  <div id="resultado" style="border: 2px solid red; padding: 50px;"></div>
+
+
+  <script>
+    document.getElementById("operaciones").addEventListener("change", function(){
+      calcular();
+    });
+
+    function calcular() {
+     const y= document.getElementById("y").value;
+     const b= document.getElementById("b").value;
+      const operaciones = document.getElementById("operaciones").value;
+      const resultadoTotal = document.getElementById("resultado");
+      var resultado;
+
+     switch(operaciones){
+      case "sumar":
+        resultado = parseFloat(y) + parseFloat(b);
+        break;
+      case "restar":
+        resultado = parseFloat(y) - parseFloat(b);
+        break;
+      case "multiplicar":
+        resultado = parseFloat(y) * parseFloat(b);
+        break;
+      case "dividir":
+        resultado = parseFloat(y) / parseFloat(b);
+        break;
+      default:
+        resultado=('no esta bien la operacion')
+        break;
+
+     }
+      
+      resultadoTotal.innerText = "Resultado: " + resultado; 
+    }
+
+    
+  </script>
+</body>
+</html>

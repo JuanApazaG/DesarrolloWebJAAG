@@ -37,7 +37,7 @@ class Cola{
             return "la cola esta vacia";
         }
         else{
-            for($i = $this ->)
+            // for($i = $this ->)
 
         }
     }

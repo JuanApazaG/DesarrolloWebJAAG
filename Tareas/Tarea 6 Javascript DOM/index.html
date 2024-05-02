@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Raíces de Ecuaciones Cuadráticas</title>
+    <link rel="stylesheet" href="/Tareas/Tarea 6 Javascript DOM/style.css">
+    
+</head>
+<body>
+
+    <div>
+        <label for="a">Ingresa a:</label>
+        <input type="number" id="a">
+    </div>
+
+    <div>
+        <label for="b">Ingresa b:</label>
+        <input type="number" id="b">
+    </div>
+
+    <div>
+        <label for="c">Ingresa c:</label>
+        <input type="number" id="c">
+    </div>
+    
+    <button onclick="calcularRaices()">Calcular Raíces</button>
+
+    <div id="resultado"></div>
+
+    <script>
+    function calcularRaices() {
+    var a = parseFloat(document.getElementById('a').value);
+    var b = parseFloat(document.getElementById('b').value);
+    var c = parseFloat(document.getElementById('c').value);
+
+    var discriminante = b * b - 4 * a * c;
+
+    var resultadoDiv = document.getElementById('resultado');
+    resultadoDiv.innerHTML = '';
+
+    if (discriminante >= 0) {
+        var x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+        var x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+
+        var x1Div = document.createElement('div');
+        x1Div.classList.add('root');
+        x1Div.textContent = 'x1 = ' + x1;
+        resultadoDiv.appendChild(x1Div);
+
+        var x2Div = document.createElement('div');
+        x2Div.classList.add('root');
+        x2Div.textContent = 'x2 = ' + x2;
+        resultadoDiv.appendChild(x2Div);
+    } else {
+        var realPart = -b / (2 * a);
+        var imaginaryPart = Math.sqrt(-discriminante) / (2 * a);
+
+        var x1 = realPart + ' + ' + imaginaryPart + 'i';
+        var x2 = realPart + ' - ' + imaginaryPart + 'i';
+
+        var x1Div = document.createElement('div');
+        x1Div.classList.add('root');
+        x1Div.textContent = 'x1 = ' + x1;
+        x1Div.style.color = 'red';
+        resultadoDiv.appendChild(x1Div);
+
+        var x2Div = document.createElement('div');
+        x2Div.classList.add('root');
+        x2Div.textContent = 'x2 = ' + x2;
+        x2Div.style.color = 'red';
+        resultadoDiv.appendChild(x2Div);
+    }
+    }
+    </script>
+
+    <div class="esplicacion">
+        <p>La letra 
+            𝑖
+            i representa la unidad imaginaria en matemáticas. En ecuaciones cuadráticas, cuando el discriminante es negativo, las raíces son números complejos que incluyen esta unidad imaginaria. Por lo tanto, al mostrar las raíces en estos casos, se utiliza la letra 
+            𝑖
+            i para indicar la parte imaginaria del número complejo.</p>
+    </div>
+
+    </body>
+</html>

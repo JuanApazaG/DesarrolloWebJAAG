@@ -9,9 +9,9 @@ class Pila {
         $this->tope=$tope;
    }
 
-   public function insert(){
-     if(!$this->elementos)
-   }
+  //  public function insert(){
+  //    if(!$this->elementos)
+  //  }
 }
 
 ;

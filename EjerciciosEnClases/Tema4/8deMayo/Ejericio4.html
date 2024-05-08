@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            display: flex;
+        }
+        .imagen {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <img class="imagen" onmouseleave="normal(img1)" onmouseover="mostrar(img1)" id="img1" src="imagen1.jpg" alt="Imagen 1">
+        <img class="imagen" onmouseleave="normal(img2)" onmouseover="mostrar(img2)" id="img2" src="imagen2.jpg" alt="Imagen 2">
+        <img class="imagen" onmouseleave="normal(img3)" onmouseover="mostrar(img3)" id="img3" src="imagen3.jpg" alt="Imagen 3">
+        <img class="imagen" onmouseleave="normal(img4)" onmouseover="mostrar(img4)" id="img4" src="imagen4.jpg" alt="Imagen 4">
+        <img class="imagen" onmouseleave="normal(img5)" onmouseover="mostrar(img5)" id="img5" src="imagen5.jpg" alt="Imagen 5">
+        <img class="imagen" onmouseleave="normal(img6)" onmouseover="mostrar(img6)" id="img6" src="imagen6.jpg" alt="Imagen 6">
+        <img class="imagen" onmouseleave="normal(img7)" onmouseover="mostrar(img7)" id="img7" src="imagen7.jpg" alt="Imagen 7">
+        <img class="imagen" onmouseleave="normal(img8)" onmouseover="mostrar(img8)" id="img8" src="imagen8.jpg" alt="Imagen 8">
+        <img class="imagen" onmouseleave="normal(img9)" onmouseover="mostrar(img9)" id="img9" src="imagen9.jpg" alt="Imagen 9">
+        <img class="imagen" onmouseleave="normal(img10)" onmouseover="mostrar(img10)" id="img10" src="imagen10.jpg" alt="Imagen 10">
+    </div>
+
+    <script>
+        function mostrar(id) {
+            document.getElementById(id).style.width = "200px"; /* Corregimos la sintaxis de estilo */
+        }
+        function normal(id) {
+            document.getElementById(id).style.width = "100px"; /* Corregimos la sintaxis de estilo */
+        }
+    </script>
+</body>
+</html>

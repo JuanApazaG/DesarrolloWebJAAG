@@ -10,6 +10,10 @@
             margin: 20px;
         }
 
+        .contenedor{
+            display: flex;
+            gap: 0.3rem;
+        }
         label {
             display: block;
             margin-bottom: 5px;
@@ -23,26 +27,29 @@
         table {
             border-collapse: collapse;
             width: 700px;
-            border: 1px solid black; /* Bordes negros en toda la tabla */
+            border: 1px solid black;
         }
 
         th, td {
             padding: 8px;
             text-align: left;
-            border: 1px solid black; /* Bordes negros en las celdas */
+            border: 1px solid black;  
         }
 
         th {
-            background-color: #B4C6E7; /* Color de fondo para los encabezados */
-            color: black; /* Color de texto para los encabezados */
+            background-color: #B4C6E7; 
+            color: black;  
         }
 
         tbody tr:nth-child(even) td {
-            background-color: #D0CECE; /* Color de fondo para las filas pares */
+            background-color: #D0CECE; 
         }
     </style>
 </head>
 <body>
+    <div class="contenedor">
+        
+    
     <label>Apellidos:</label>
     <input type="text" id="apellidos"><br>
 
@@ -57,8 +64,8 @@
 
     <label>Nota:</label>
     <input type="number" id="nota"><br>
-
     <button onclick="agregarEstudiante()">Añadir</button>
+</div>
 
     <table>
         <thead>
@@ -67,7 +74,7 @@
                 <th>Apellidos Nombres</th>
                 <th>Edad</th>
                 <th>Materia</th>
-                <th>Nota</th> <!-- Arreglé un pequeño error de escritura en el encabezado -->
+                <th>Nota</th> 
             </tr>
         </thead>
         <tbody id="tablaEstudiantes"></tbody>
@@ -144,7 +151,7 @@
                 const fila = document.createElement('tr');
 
                 const celdaId = document.createElement('td');
-                celdaId.textContent = i + 1; // Número de ID empezando desde 1
+                celdaId.textContent = i + 1; 
                 fila.appendChild(celdaId);
 
                 const celdaNombreCompleto = document.createElement('td');

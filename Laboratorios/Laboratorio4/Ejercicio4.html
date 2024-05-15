@@ -26,44 +26,41 @@
     .input-group {
         display: flex;
         margin-bottom: 10px;
-        align-items: center; /* Centra verticalmente los elementos */
-        justify-content: center; /* Centra horizontalmente los elementos */
+        align-items: center; 
+        justify-content: center; 
     }
 
     #itemInput {
         flex-grow: 0;
-        padding: 3px; /* Hice el tamaño del input más pequeño */
-        /* border: none; Quité el borde del input */
+        padding: 3px; 
     }
 
     #addBtn {
         margin-left: 10px;
         padding: 5px 10px;
-        background-color: #5B9BD5; /* Color de fondo del botón */
-        color: white; /* Color del texto del botón */
-        border: 1px solid #41719C; /* Borde del botón */
+        background-color: #5B9BD5; 
+        color: white; 
+        border: 1px solid #41719C; 
         font-size: 2rem;
     }
 
     ul {
-        list-style-type: none; /* Quité los puntos de la lista */
+        list-style-type: none; 
         padding: 0;
-        margin: 0; /* Quité el margen de la lista */
+        margin: 0; 
     }
 
     li {
         padding: 5px;
-        /* background-color: #f4f4f4; */
         margin-bottom: 5px;
-        display: flex; /* Hice que los elementos de la lista estén en línea */
-        align-items: center; /* Centrar verticalmente los elementos de la lista */
+        display: flex; 
+        align-items: center; 
     }
 
     li::before {
         font-size: 1rem;
-        content: "o"; /* Agregué el signo "•" como marcador */
-        margin-right: 5px; /* Añadí un espacio entre el marcador y el texto */
-        /* color: #666; Cambié el color del marcador */
+        content: "o";
+        margin-right: 5px; 
     }
 
     li.highlight {
@@ -71,7 +68,7 @@
     }
 
     .input-group label {
-        margin-right: 2rem; /* Agregué un margen a la derecha del label */
+        margin-right: 2rem; 
     }
 
 </style>
@@ -98,8 +95,8 @@
         const listItem = document.createElement('li');
         listItem.textContent = itemText;
         if (itemText.includes('de')) {
-        listItem.classList.add('highlight');
-        }
+            listItem.classList.add('highlight');
+        }   
         shoppingList.appendChild(listItem);
         itemInput.value = '';
     }

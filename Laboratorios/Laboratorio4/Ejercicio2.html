@@ -9,7 +9,10 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-
+        .contenedor{
+            display: flex;
+            gap: 0.3rem;
+        }
         label {
             display: block;
             margin-bottom: 5px;
@@ -23,26 +26,29 @@
         table {
             border-collapse: collapse;
             width: 700px;
-            border: 1px solid black; /* Bordes negros en toda la tabla */
+            border: 1px solid black; 
         }
 
         th, td {
             padding: 8px;
             text-align: left;
-            border: 1px solid black; /* Bordes negros en las celdas */
+            border: 1px solid black; 
         }
 
         th {
-            background-color: #B4C6E7; /* Color de fondo para los encabezados */
-            color: black; /* Color de texto para los encabezados */
+            background-color: #B4C6E7; 
+            color: black; 
         }
 
         tbody tr:nth-child(even) td {
-            background-color: #D0CECE; /* Color de fondo para las filas pares */
+            background-color: #D0CECE; 
         }
     </style>
 </head>
 <body>
+  <div class="contenedor">
+
+  
   <label>Apellidos:</label>
   <input type="text" id="apellidos"><br>
 
@@ -60,7 +66,7 @@
 
   <button onclick="agregarEstudiante()">Añadir</button>
   <button onclick="encontrarMejorEstudiante()">Encontrar Mejor Estudiante</button>
-
+</div>
   <table>
     <thead>
       <tr>
@@ -181,7 +187,6 @@
     let mejorNota = -1;
     let mejorEstudiante = null;
 
-    // Encontrar al estudiante con la mayor nota
     for (const estudiante of estudiantes) {
         const nota = estudiante.calificaciones.nota;
         if (nota > mejorNota) {
@@ -190,7 +195,6 @@
         }
     }
 
-  // Cambiar el color de fondo de la fila del mejor estudiante a rojo
     const filas = document.querySelectorAll('#tablaEstudiantes tr');
     for (const fila of filas) {
         const celdas = fila.getElementsByTagName('td');
@@ -199,7 +203,7 @@
 
         if (mejorEstudiante && nombreCompleto === `${mejorEstudiante.apellidos} ${mejorEstudiante.nombres}` && nota === mejorEstudiante.calificaciones.nota) {
         fila.style.backgroundColor = 'red';
-        fila.style.color = 'white';
+        // fila.style.color = 'white';
         } else {
         fila.style.backgroundColor = '';
         fila.style.color = '';

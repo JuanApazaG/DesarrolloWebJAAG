@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio3</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    img {
+        max-width: 500px;
+        height: auto;
+    }
+
+    .controls {
+     margin-top: 20px;
+    }
+
+    input[type="number"] {
+        width: 60px;
+        padding: 5px;
+    }
+
+    button {
+        padding: 5px 10px;
+        margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="myImage" src="pizza.png" alt="Mi Imagen">
+    <div class="controls">
+      <input type="number" id="sizeInput" value="10" min="1">
+      <button id="enlargeBtn">Agrandar</button>
+      <button id="reduceBtn">Reducir</button>
+    </div>
+  </div>
+  <script >
+    const image = document.getElementById('myImage');
+    const sizeInput = document.getElementById('sizeInput');
+    const enlargeBtn = document.getElementById('enlargeBtn');
+    const reduceBtn = document.getElementById('reduceBtn');
+
+    let currentWidth = image.width;
+
+    enlargeBtn.addEventListener('click', () => {
+        const increment = parseInt(sizeInput.value);
+        currentWidth += increment;
+        image.width = currentWidth;
+    });
+
+    reduceBtn.addEventListener('click', () => {
+        const decrement = parseInt(sizeInput.value);
+    currentWidth -= decrement;
+    image.width = currentWidth;
+    });
+  </script>
+</body>
+</html>

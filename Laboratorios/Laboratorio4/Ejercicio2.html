@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, button {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 700px;
+            border: 1px solid black; /* Bordes negros en toda la tabla */
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid black; /* Bordes negros en las celdas */
+        }
+
+        th {
+            background-color: #B4C6E7; /* Color de fondo para los encabezados */
+            color: black; /* Color de texto para los encabezados */
+        }
+
+        tbody tr:nth-child(even) td {
+            background-color: #D0CECE; /* Color de fondo para las filas pares */
+        }
+    </style>
+</head>
+<body>
+  <label>Apellidos:</label>
+  <input type="text" id="apellidos"><br>
+
+  <label>Nombres:</label>
+  <input type="text" id="nombres"><br>
+
+  <label>Edad:</label>
+  <input type="number" id="edad"><br>
+
+  <label>Materia:</label>
+  <input type="text" id="materia"><br>
+
+  <label>Nota:</label>
+  <input type="number" id="nota"><br>
+
+  <button onclick="agregarEstudiante()">Añadir</button>
+  <button onclick="encontrarMejorEstudiante()">Encontrar Mejor Estudiante</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Apellidos Nombres</th>
+        <th>Edad</th>
+        <th>Materia</th>
+        <th>Nota</th>
+      </tr>
+    </thead>
+    <tbody id="tablaEstudiantes"></tbody>
+  </table>
+
+  <script>
+    const estudiantes = [
+      {
+        apellidos: 'Perez',
+        nombres: 'Juan',
+        edad: 25,
+        calificaciones: {
+          materia: 'SIS-256',
+          nota: 83
+        }
+      },
+      {
+        apellidos: 'Luna',
+        nombres: 'Ricardo',
+        edad: 30,
+        calificaciones: {
+          materia: 'SIS-258',
+          nota: 70
+        }
+      },
+      {
+        apellidos: 'Tomasa',
+        nombres: 'Teresa',
+        edad: 26,
+        calificaciones: {
+          materia: 'SIS-256',
+          nota: 84
+        }
+      },
+      {
+        apellidos: 'Umbre',
+        nombres: 'Favian',
+        edad: 24,
+        calificaciones: {
+          materia: 'SIS-258',
+          nota: 70
+        }
+      }
+    ];
+
+    function agregarEstudiante() {
+      const apellidos = document.getElementById('apellidos').value;
+      const nombres = document.getElementById('nombres').value;
+      const edad = document.getElementById('edad').value;
+      const materia = document.getElementById('materia').value;
+      const nota = document.getElementById('nota').value;
+
+      const nuevoEstudiante = {
+        apellidos,
+        nombres,
+        edad: parseInt(edad),
+        calificaciones: {
+          materia,
+          nota: parseInt(nota)
+        }
+      };
+
+      estudiantes.push(nuevoEstudiante);
+      actualizarTabla();
+      limpiarControles();
+      encontrarMejorEstudiante();
+    }
+
+    function actualizarTabla() {
+      const tablaBody = document.getElementById('tablaEstudiantes');
+      tablaBody.innerHTML = '';
+
+      for (let i = 0; i < estudiantes.length; i++) {
+        const estudiante = estudiantes[i];
+        const fila = document.createElement('tr');
+
+        const celdaId = document.createElement('td');
+        celdaId.textContent = i + 1;
+        fila.appendChild(celdaId);
+
+        const celdaNombreCompleto = document.createElement('td');
+        celdaNombreCompleto.textContent = `${estudiante.apellidos} ${estudiante.nombres}`;
+        fila.appendChild(celdaNombreCompleto);
+
+        const celdaEdad = document.createElement('td');
+        celdaEdad.textContent = estudiante.edad;
+        fila.appendChild(celdaEdad);
+
+        const celdaMateria = document.createElement('td');
+        celdaMateria.textContent = estudiante.calificaciones.materia;
+        fila.appendChild(celdaMateria);
+
+        const celdaNota = document.createElement('td');
+        celdaNota.textContent = estudiante.calificaciones.nota;
+        fila.appendChild(celdaNota);
+
+        tablaBody.appendChild(fila);
+      }
+    }
+
+    function limpiarControles() {
+      document.getElementById('apellidos').value = '';
+      document.getElementById('nombres').value = '';
+      document.getElementById('edad').value = '';
+      document.getElementById('materia').value = '';
+      document.getElementById('nota').value = '';
+    }
+
+    function encontrarMejorEstudiante() {
+    let mejorNota = -1;
+    let mejorEstudiante = null;
+
+    // Encontrar al estudiante con la mayor nota
+    for (const estudiante of estudiantes) {
+        const nota = estudiante.calificaciones.nota;
+        if (nota > mejorNota) {
+        mejorNota = nota;
+        mejorEstudiante = estudiante;
+        }
+    }
+
+  // Cambiar el color de fondo de la fila del mejor estudiante a rojo
+    const filas = document.querySelectorAll('#tablaEstudiantes tr');
+    for (const fila of filas) {
+        const celdas = fila.getElementsByTagName('td');
+        const nombreCompleto = celdas[1].textContent.trim();
+        const nota = parseInt(celdas[4].textContent);
+
+        if (mejorEstudiante && nombreCompleto === `${mejorEstudiante.apellidos} ${mejorEstudiante.nombres}` && nota === mejorEstudiante.calificaciones.nota) {
+        fila.style.backgroundColor = 'red';
+        fila.style.color = 'white';
+        } else {
+        fila.style.backgroundColor = '';
+        fila.style.color = '';
+        }
+    }
+}
+
+
+    actualizarTabla();
+  </script>
+</body>
+</html>

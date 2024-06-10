@@ -9,14 +9,6 @@ function cargarMenu() {
     ajax.send();
 }
 
-function colocarMensaje() {
-    var mensaje = document.getElementById('mensaje');
-    var nombre = "Juan Agustin Apaza"; // Puedes reemplazar "Tu Nombre" con tu nombre real
-    var carnet = "35-5228"; // Puedes reemplazar "Tu Carnet" con tu número de carnet real
-    mensaje.innerHTML = 'Nombre: ' + nombre + ', Carnet Universitario: ' + carnet;
-}
-
-
 function pregunta2() {
     fetch("galeria.php")
     .then((response) => response.text())
@@ -74,26 +66,63 @@ function loguearse() {
         }
     });
 }
-///////////////////
-
-
-function listarLibros() {
-    fetch("listar.php")
-    .then((response) => response.text())
-    .then((data) => {
-        document.getElementById('principal').innerHTML = data;
-    });
+function mostrarLibros() {
+    fetch('listar.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('principal').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
 
-function editarLibro(id) {
-    // Aquí puedes agregar la funcionalidad para editar el libro
-    alert("Editar libro con ID: " + id);
+// Función para editar un libro (debes implementarla)
+function editar(id) {
+    console.log('Editar libro con ID:', id);
+    // Aquí puedes agregar el código para editar el libro
 }
 
-function eliminarLibro(id) {
-    // Aquí puedes agregar la funcionalidad para eliminar el libro
-    alert("Eliminar libro con ID: " + id);
+// Función para eliminar un libro (debes implementarla)
+function eliminar(id) {
+    console.log('Eliminar libro con ID:', id);
+    // Aquí puedes agregar el código para eliminar el libro
 }
 
-// Agregar el evento para el botón 4
-document.querySelector(".boton:nth-child(4)").addEventListener("click", listarLibros);
+function mostrarDatosLibros() {
+    fetch('datos.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                let select = document.createElement('select');
+                select.id = 'librosSelect';
+                select.onchange = actualizarImagen;
+
+                data.libros.forEach(libro => {
+                    let option = document.createElement('option');
+                    option.value = libro.imagen;
+                    option.textContent = libro.titulo;
+                    select.appendChild(option);
+                });
+
+                document.getElementById('mensaje').innerHTML = '';
+                document.getElementById('mensaje').appendChild(select);
+
+                // Mostrar la primera imagen por defecto
+                if (data.libros.length > 0) {
+                    document.getElementById('principal').innerHTML = `<img src="${data.libros[0].imagen}" alt="${data.libros[0].titulo}" style="max-width:100%;max-height:100%;display:block;margin:auto;" />`;
+                }
+            } else {
+                document.getElementById('mensaje').innerHTML = data.mensaje;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function actualizarImagen() {
+    let select = document.getElementById('librosSelect');
+    let imagen = select.value;
+    document.getElementById('principal').innerHTML = `<img src="${imagen}" alt="imagen" style="max-width:100%;max-height:100%;display:block;margin:auto;" />`;
+}

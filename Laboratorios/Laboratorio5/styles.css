@@ -1,0 +1,45 @@
+.container {
+    text-align: center;
+    margin-top: 25px;
+}
+.header {
+    margin-bottom: 20px;
+}
+.header h1 {
+    font-size: 25px;
+    margin: 0;
+}
+.header p {
+    font-size: 25px;
+    margin: 5px 0;
+}
+.botones {
+    margin: 20px 0;
+}
+.botones button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+.contenido {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    min-height: 200px;
+}
+
+.message {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+} 
+ table {
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+} 

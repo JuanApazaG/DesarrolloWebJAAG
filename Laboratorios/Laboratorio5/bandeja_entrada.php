@@ -1,21 +1,19 @@
 <?php 
 include('conexion.php');
 
-$sql = "SELECT correo, asunto, mensaje FROM correos";
+$sql = "SELECT correo, asunto, mensaje,tipo FROM correos";
 
 $resultado = $con->query($sql);
 ?>
 <table>
     <th>Correo</th>
-    <th>Asunto</th>
-    <th>Mensaje</th>
+    <th>Tipo</th>
     <?php
     while ($row = $resultado->fetch_assoc()){
         ?>
         <tr>
             <td><?php echo $row['correo'];?> </td>
-            <td><?php echo $row['asunto']; ?> </td>
-            <td><?php echo $row['mensaje']; ?> </td>
+            <td><?php echo $row['tipo'];?> </td>
         </tr>
         <?php
     }

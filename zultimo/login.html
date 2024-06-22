@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container-pregunta1">
+        <form id="loginForm" action="autenticar.php" method="POST">
+            <div class="datos-login">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="text" id="password" name="password" readonly required>
+            </div>
+            
+            <div class="teclado-virtual">
+                <table>
+                    <tr>
+                        <td><input type="button" value="1" onclick="addCharacter('1')"></td>
+                        <td><input type="button" value="2" onclick="addCharacter('2')"></td>
+                        <td><input type="button" value="3" onclick="addCharacter('3')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="4" onclick="addCharacter('4')"></td>
+                        <td><input type="button" value="5" onclick="addCharacter('5')"></td>
+                        <td><input type="button" value="6" onclick="addCharacter('6')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="7" onclick="addCharacter('7')"></td>
+                        <td><input type="button" value="8" onclick="addCharacter('8')"></td>
+                        <td><input type="button" value="9" onclick="addCharacter('9')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="A" onclick="addCharacter('A')"></td>
+                        <td><input type="button" value="B" onclick="addCharacter('B')"></td>
+                        <td><input type="button" value="C" onclick="addCharacter('C')"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="button" value="Limpiar" class="btn_limpiar" onclick="clearPassword()"></td>
+                    </tr>
+                </table>
+                <div class="butones">
+                    <input type="submit" value="Entrar" id="btn_" class="btn_">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

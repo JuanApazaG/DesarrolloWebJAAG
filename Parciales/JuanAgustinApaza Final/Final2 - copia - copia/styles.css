@@ -1,0 +1,383 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border-collapse: collapse;
+        /* color: rgb(59, 124, 246); */
+        /* padding-bottom: 50px; */
+    }
+
+    .container{
+        width: 900px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .header{
+        display: flex;
+        border-bottom: 1px solid black;
+        width: 100%;
+    }
+
+    .logo{
+        display: block;
+        width: 12%;
+    }
+
+    .header-sec{
+        display: flex;
+        width: 88%;
+        flex-direction: column;
+    }
+
+    .navbar{
+        display: flex;
+        border-bottom: 1px dotted black;
+        min-height: 30px;
+        background-color: rgb(215, 209, 209);
+    }
+
+    .button{
+        padding: 15px 0;
+        width: 20%;
+        border-right: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button:hover{
+        color: white;
+        cursor: pointer;
+    }
+
+    #titulo{
+        /* padding: 16px 0; */
+        width: 100%;
+        border-bottom: 1px dotted black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content{
+        width: 100%;
+        display: flex;
+    }
+
+    /* #titulo{
+        width: 12%;
+        border-right: 1px solid black;
+    } */
+
+
+    #contenido{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 88%;
+    }
+
+    .menu_titulo{
+        width: 100%;
+        background-color: rgb(215, 209, 209);
+        color: gray;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    .asignatura{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .asignatura:hover{
+        background-color: rgb(215, 209, 209);
+        color: gray;
+        cursor: pointer;
+    }
+
+    .selected{
+        background-color: rgb(215, 209, 209);
+        color: gray;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        width: 60%;
+        border: 2px solid black;
+    }
+
+    .semestre{
+        background-color: yellow;
+        border: 2px solid black;
+        padding: 5px;
+    }
+
+    .informes{
+        border: 2.5px solid black;
+        padding: 20px;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        margin: 10px;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    a:hover {
+        color: #e3dbdb ;
+    }
+
+    body {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        width: 900px;
+        border: 1px solid #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+
+    header {
+        display: flex;
+        width: 900px;
+        border-left: 1px solid #000;
+    }
+
+    .cabecera-derecha {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #F8AD8F;
+        width: 750px;
+        height: 140px;
+    }
+
+    .cbd-superior {
+        border: 2px solid #000;
+        width: 100%;
+    }
+
+    .btn-preguntas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 85px;
+        text-align: center;
+    }
+
+    .btn-pregunta {
+        display: flex;
+        justify-content: center;
+        width: 110px;
+        height: 40px;
+        background-color: #FFF;
+        align-items: center;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .lineas-verticales {
+        border-left: 2px solid #000;
+        height: 40px;
+    }
+
+    .tit-preguntas {
+        background-color:#F3D4C8 ;
+        width: 100%;
+        height: 85px;
+        border: 2px dotted #000;
+        text-align: center;
+        padding: 10px;
+    }
+
+    main {
+        display: flex;
+        width: inherit;
+    }
+
+    .barra-lat-izquierda {
+        width: 150px;
+        border: 1px solid #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .btn-opciones {
+        width: 100%;
+        height: 50px;
+        align-content: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-op-principal {
+        background-color: #C04716 ;
+        color: #FFF;
+    }
+
+    .btn-op-secundarios {
+        width: 95%;
+        color: #000;
+        border: 1px solid #000;
+    }
+
+    .contenedor-derecho {
+        width: 750px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .informacion {
+        margin-top: 75px;
+        height: 400px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #000;
+        margin-bottom: 70px;
+        position: relative;
+        border-radius: 20px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
+    .informacion img {
+        position: absolute;
+        top: 40%; 
+        left: 25%; 
+        transform: translate(-50%, -50%);
+        z-index: 1; 
+        border-radius: 50%;
+    }
+
+    .cabecera-informacion {
+        background-color: #D0DBEC  ;
+        height: 150px;
+        color: #7683EA ; 
+        line-height: 2;
+        padding-left: 20px;
+        padding-top: 20px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
+    .footer-informacion {
+        height: 220px;
+        background-color: #FFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        padding-top: 20px;
+        color: #5f5e5e;
+    }
+
+    span {
+        font-size: 0.7rem;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000;
+        background-color: #F8AD8F;
+        width: 100%;
+        height: 50px;
+    }
+
+    /* Resto del CSS igual... */
+
+    /* Añadido */
+    #contenido input[type="number"] {
+        width: 50px;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    #contenido button {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: rgb(200, 196, 196);
+        color: black;
+        border: 2.5px solid black;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    #contenido button:hover {
+        background-color: #ffffff;
+    }
+
+    #exercises div {
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+
+    #contenido #numExercises {
+        width: 50px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contenido .exercise-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contenido .exercise-container div {
+        margin: 10px 0;
+    }
+
+    #contenido .exercise-container button {
+        margin-top: 10px;
+    }
+    #escudo {
+        position: absolute;
+        bottom: 10px;
+        right: 311px;
+    }
+    #contador {
+        position: absolute;
+        bottom: 10px;
+        left: 360px;
+        background-color: yellow;
+        padding: 10px;
+        border: 1px solid #000;
+        font-size: 20px;
+    }
+
+

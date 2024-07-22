@@ -14,24 +14,30 @@
         }
         td{
             border: 1px solid black;
-            width: 25px;
+            width: 60px;
             height: 20px;
+        }
+        .highlight {
+            background-color: yellow;
         }
     </style>
 </head>
 <body>
-    <label for="">Materia</label>
-    <select name="" id="select-input">
-        <option id="materia" value="SIS-256">SIS-256</option>
-        <option id="materia" value="SIS-258">SIS-258</option>
-        <option id="materia" value="SIS-406">SIS-406</option>
+    <label for="select-input">Materia</label>
+    <select name="materia" id="select-input">
+        <option class="asignatura selected" value="SIS256">SIS-256</option>
+        <option class="asignatura" value="SIS258">SIS-258</option>
+        <option class="asignatura" value="SIS406">SIS-406</option>
     </select>
-    <table border="1" id="table">
+    <br>
+    <label for="">Horario</label>
+    <br>
+    <table border="1" id="table" style="padding-top: 0;">
         <tr>
             <th>Hora</th>
             <th>Lunes</th>
             <th>Martes</th>
-            <th>Miercoles</th>
+            <th>Miércoles</th>
             <th>Jueves</th>
             <th>Viernes</th>
         </tr>
@@ -76,8 +82,7 @@
             <td></td>
         </tr>
         <tr>
-            <td style="background-color: blue;"colspan="5">desanso</td>
-          
+            <td style="background-color: blue; text-align: center;"colspan="6">descanso</td>
         </tr>
         <tr>
             <td>13-14</td>
@@ -112,14 +117,6 @@
             <td></td>
         </tr>
         <tr>
-            <td>16-17</td>
-            <td></td> 
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
             <td>17-18</td>
             <td></td> 
             <td></td>
@@ -130,16 +127,13 @@
     </table>
 </body>
 <script>
-    function horarios(){
-        let input = document.getElementById('select-input')
-
-        let data = document.getElementById('table')
-        fetch(`horarios.php`)
-        then(response=>response.json())
-        then()=>{
-            
-        }
-    }
+    document.getElementById('select-input').addEventListener('change', function() {
+    const selected = this.value;
+    fetch(`horarios.php?materia=${selected}`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('table').innerHTML = data;
+        })
+});
 </script>
 </html>
-
